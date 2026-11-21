@@ -69,3 +69,15 @@ Delete the items marked `sample: true` once you have your own.
 - Download and view counters (needs a small backend, such as a Cloudflare Worker or Supabase)
 - A page for each product with its own preview images
 - A PRD or prompt generator form
+
+## Updating the live site
+
+```
+git add -A
+git commit -m "Update content"
+git push
+```
+GitHub Pages updates about a minute later.
+
+Browsers cache the CSS/JS files for up to 10 minutes. After changing anything in `assets/` or `data/`,
+bump the version in the links in `index.html` and `library.html` (for example `?v=2` → `?v=3`) so visitors get the new files straight away.
