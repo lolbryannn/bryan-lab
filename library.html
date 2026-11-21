@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library · bryan.lab</title>
+  <meta name="description" content="Templates, design files, presets, tutorials and products from Bryan (@lolbryannn).">
+  <meta name="theme-color" content="#08090c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="index.html"><span class="logo-dot"></span><span data-brand></span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html" class="hide-sm" data-i18n="nav.home"></a>
+        <a href="library.html" aria-current="page" data-i18n="nav.library"></a>
+        <a href="index.html#prompts" data-i18n="nav.prompts"></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="lib-head wrap">
+      <div class="eyebrow">/library</div>
+      <h1 data-i18n="lib.title"></h1>
+      <p data-i18n="lib.lead"></p>
+    </section>
+
+    <div class="toolbar">
+      <div class="wrap">
+        <label class="search">
+          <span class="ico" aria-hidden="true">⌕</span>
+          <input id="q" type="search" autocomplete="off" data-i18n-ph="lib.search" aria-label="Search">
+          <kbd>Ctrl K</kbd>
+        </label>
+        <div class="filters" id="filters" role="toolbar" aria-label="Filters"></div>
+      </div>
+    </div>
+
+    <section class="wrap">
+      <div class="result-count" id="count" aria-live="polite"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span>© <span data-year></span> <span data-brand></span> · <span data-i18n="foot.made"></span></span>
+      <span data-foot-socials></span>
+    </div>
+  </footer>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" aria-hidden="true" tabindex="-1"></aside>
+
+  <script src="data/content.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/library.js"></script>
+</body>
+</html>

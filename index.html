@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bryan.lab · templates, prompts, presets</title>
+  <meta name="description" content="Templates, prompts, design files, presets, tutorials and products from Bryan (@lolbryannn).">
+  <meta property="og:title" content="bryan.lab">
+  <meta property="og:description" content="Everything you see in my videos lives here.">
+  <meta name="theme-color" content="#08090c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="index.html"><span class="logo-dot"></span><span data-brand></span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="library.html" data-i18n="nav.library"></a>
+        <a href="#prompts" data-i18n="nav.prompts"></a>
+        <a href="#socials" class="hide-sm" data-i18n="nav.socials"></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <div class="who">
+        <div class="avatar" id="avatar"></div>
+        <div>
+          <div class="who-name" id="who-name"></div>
+          <div class="who-handle"><span id="who-handle"></span> · <span class="status" data-i18n="hero.status"></span></div>
+        </div>
+      </div>
+      <h1 id="headline"></h1>
+      <p class="lead" data-site="intro"></p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="library.html"><span data-i18n="hero.cta1"></span> →</a>
+        <a class="btn" href="#prompts" data-i18n="hero.cta2"></a>
+      </div>
+      <div class="term" aria-hidden="true">
+        <div class="term-bar"><i></i><i></i><i></i></div>
+        <div class="term-body" id="term"></div>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="explore-h">
+      <div class="section-head">
+        <div><div class="eyebrow" data-i18n="home.explore"></div><h2 id="explore-h" data-i18n="home.exploreH"></h2></div>
+      </div>
+      <div class="types" id="types"></div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="featured-h">
+      <div class="section-head">
+        <div><div class="eyebrow" data-i18n="home.featured"></div><h2 id="featured-h" data-i18n="home.featuredH"></h2></div>
+        <a class="link-arrow" href="library.html" data-i18n="home.all"></a>
+      </div>
+      <div class="grid" id="featured"></div>
+    </section>
+
+    <section class="section wrap" id="prompts" aria-labelledby="prompts-h">
+      <div class="section-head">
+        <div><div class="eyebrow" data-i18n="home.prompts"></div><h2 id="prompts-h" data-i18n="home.promptsH"></h2></div>
+      </div>
+      <div class="prompts" id="prompt-list"></div>
+    </section>
+
+    <section class="section wrap" id="socials" aria-labelledby="socials-h">
+      <div class="section-head">
+        <div><div class="eyebrow" data-i18n="home.socials"></div><h2 id="socials-h" data-i18n="home.socialsH"></h2></div>
+      </div>
+      <div class="socials" id="social-list"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span>© <span data-year></span> <span data-brand></span> · <span data-i18n="foot.made"></span></span>
+      <span data-foot-socials></span>
+    </div>
+  </footer>
+
+  <script src="data/content.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/home.js"></script>
+</body>
+</html>
