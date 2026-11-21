@@ -48,19 +48,44 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!feat.length) feat = A.ITEMS.slice(0, 3);
     $("featured").innerHTML = feat.slice(0, 6).map(A.cardHTML).join("");
 
-    // prompts
-    $("prompt-list").innerHTML = A.PROMPTS.map((p, i) => `
-      <article class="prompt reveal">
-        <div class="prompt-head"><h3>${A.esc(A.t(p.title))}</h3><span class="meta">${A.sampleBadge(p)}<span class="badge">${A.esc(p.tag || "")}</span></span></div>
-        <pre>${A.esc(A.t(p.text))}</pre>
-        <div class="prompt-foot"><span class="mono muted" style="font-size:12px">#${String(i + 1).padStart(2, "0")}</span><button class="btn btn-sm copy" type="button" data-i="${i}">${A.esc(A.ui("copy"))}</button></div>
-      </article>`).join("");
+    renderPrompts();
 
     // socials
     $("social-list").innerHTML = A.socialsHTML();
 
     A.observeReveal();
   }
+
+  /* ---------- prompt pack with topic filters ---------- */
+  const CATS = window.PROMPT_CATS || [];
+  let promptCat = "all";
+
+  function renderPrompts() {
+    const chip = (key, label, n) =>
+      `<button type="button" class="chip" data-cat="${A.esc(key)}" aria-pressed="${promptCat === key}">${A.esc(label)} <span class="n">${n}</span></button>`;
+    $("prompt-filters").innerHTML = CATS.length
+      ? [chip("all", A.ui("lib.all"), A.PROMPTS.length)]
+          .concat(CATS.map(c => chip(c.key, A.t(c.label), A.PROMPTS.filter(p => p.cat === c.key).length)))
+          .join("")
+      : "";
+    const catLabel = key => { const c = CATS.find(x => x.key === key); return c ? A.t(c.label) : ""; };
+    $("prompt-list").innerHTML = A.PROMPTS.map((p, i) => ({ p, i }))
+      .filter(x => promptCat === "all" || x.p.cat === promptCat)
+      .map(({ p, i }) => `
+      <article class="prompt reveal">
+        <div class="prompt-head"><h3>${A.esc(A.t(p.title))}</h3><span class="meta">${A.sampleBadge(p)}<span class="badge">${A.esc(p.tag || "")}</span></span></div>
+        <pre tabindex="0">${A.esc(A.t(p.text))}</pre>
+        <div class="prompt-foot"><span class="mono muted" style="font-size:12px">#${String(i + 1).padStart(2, "0")} · ${A.esc(catLabel(p.cat))}</span><button class="btn btn-sm copy" type="button" data-i="${i}">${A.esc(A.ui("copy"))}</button></div>
+      </article>`).join("");
+    A.observeReveal($("prompt-list"));
+  }
+
+  $("prompt-filters").addEventListener("click", e => {
+    const b = e.target.closest(".chip");
+    if (!b) return;
+    promptCat = b.dataset.cat;
+    renderPrompts();
+  });
 
   $("prompt-list").addEventListener("click", async e => {
     const b = e.target.closest(".copy");

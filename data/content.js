@@ -191,33 +191,4 @@ window.ITEMS = [
   }
 ];
 
-/* PROMPTS shown on the home page, with a copy button. */
-window.PROMPTS = [
-  {
-    sample: true,
-    title: { id: "Hook 3 detik", en: "3-second hook" },
-    tag: "caption",
-    text: {
-      id: "Kamu penulis konten TikTok. Buat 10 kalimat pembuka (maks 12 kata) untuk video tentang [TOPIK] untuk [TARGET PENONTON]. Setiap hook harus memancing rasa penasaran tanpa clickbait. Beri label gaya tiap hook: pertanyaan, angka, kontroversi, atau cerita.",
-      en: "You are a TikTok scriptwriter. Write 10 opening lines (max 12 words) for a video about [TOPIC] for [AUDIENCE]. Each hook must create curiosity without clickbait. Label each one: question, number, contrarian or story."
-    }
-  },
-  {
-    sample: true,
-    title: { id: "Naskah 30 detik", en: "30-second script" },
-    tag: "script",
-    text: {
-      id: "Tulis naskah video 30 detik tentang [TOPIK]. Struktur: hook (3 dtk), masalah (7 dtk), solusi dalam 3 langkah (15 dtk), ajakan (5 dtk). Bahasa santai, kalimat pendek, cocok dibaca keras.",
-      en: "Write a 30-second video script about [TOPIC]. Structure: hook (3s), problem (7s), 3-step solution (15s), call to action (5s). Casual tone, short sentences, easy to read aloud."
-    }
-  },
-  {
-    sample: true,
-    title: { id: "Ide konten seminggu", en: "A week of content ideas" },
-    tag: "planning",
-    text: {
-      id: "Aku kreator di niche [NICHE]. Buat rencana 7 hari: 1 ide per hari, format (Reels/carousel/story), judul, dan alasan kenapa penonton akan share.",
-      en: "I'm a creator in the [NICHE] niche. Make a 7-day plan: one idea per day, format (Reel/carousel/story), title, and why viewers would share it."
-    }
-  }
-];
+/* Prompts live in data/prompts.js */
