@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0b2e2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <!-- laptop-ish app window -->
+  <rect x="60" y="44" width="400" height="272" rx="16" fill="#f3f5f4"/>
+  <rect x="60" y="44" width="400" height="34" rx="16" fill="#ffffff"/>
+  <rect x="60" y="62" width="400" height="16" fill="#ffffff"/>
+  <rect x="74" y="54" width="16" height="16" rx="4" fill="#0f766e"/>
+  <rect x="98" y="57" width="70" height="8" rx="4" fill="#15201c"/>
+  <!-- product grid -->
+  <g fill="#ffffff" stroke="#e3e8e6">
+    <rect x="74" y="92" width="74" height="62" rx="9"/><rect x="156" y="92" width="74" height="62" rx="9"/><rect x="238" y="92" width="74" height="62" rx="9"/>
+    <rect x="74" y="162" width="74" height="62" rx="9"/><rect x="156" y="162" width="74" height="62" rx="9"/><rect x="238" y="162" width="74" height="62" rx="9"/>
+    <rect x="74" y="232" width="74" height="62" rx="9"/><rect x="156" y="232" width="74" height="62" rx="9"/><rect x="238" y="232" width="74" height="62" rx="9"/>
+  </g>
+  <g font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif" font-size="20">
+    <text x="82" y="116">☕</text><text x="164" y="116">🧋</text><text x="246" y="116">🍵</text>
+    <text x="82" y="186">🍜</text><text x="164" y="186">🍛</text><text x="246" y="186">🍞</text>
+    <text x="82" y="256">🍟</text><text x="164" y="256">🥟</text><text x="246" y="256">🍪</text>
+  </g>
+  <g fill="#115e59">
+    <rect x="82" y="140" width="40" height="6" rx="3"/><rect x="164" y="140" width="34" height="6" rx="3"/><rect x="246" y="140" width="44" height="6" rx="3"/>
+    <rect x="82" y="210" width="38" height="6" rx="3"/><rect x="164" y="210" width="44" height="6" rx="3"/><rect x="246" y="210" width="36" height="6" rx="3"/>
+    <rect x="82" y="280" width="40" height="6" rx="3"/><rect x="164" y="280" width="36" height="6" rx="3"/><rect x="246" y="280" width="30" height="6" rx="3"/>
+  </g>
+  <!-- cart panel -->
+  <rect x="322" y="92" width="126" height="202" rx="10" fill="#ffffff" stroke="#e3e8e6"/>
+  <rect x="332" y="104" width="56" height="8" rx="4" fill="#15201c"/>
+  <g fill="#cfd8d4"><rect x="332" y="126" width="70" height="6" rx="3"/><rect x="332" y="146" width="56" height="6" rx="3"/><rect x="332" y="166" width="64" height="6" rx="3"/></g>
+  <rect x="332" y="232" width="40" height="10" rx="4" fill="#15201c"/>
+  <rect x="396" y="232" width="42" height="10" rx="4" fill="#15201c"/>
+  <rect x="332" y="254" width="106" height="28" rx="8" fill="#0f766e"/>
+  <!-- receipt -->
+  <g transform="translate(470 70) rotate(4)">
+    <path d="M0 0h130v214l-10-6-11 6-10-6-11 6-10-6-11 6-10-6-11 6-10-6-11 6-10-6-15 6z" fill="#ffffff"/>
+    <rect x="30" y="16" width="70" height="8" rx="4" fill="#15201c"/>
+    <g fill="#8c9a95"><rect x="14" y="40" width="102" height="4" rx="2"/><rect x="14" y="56" width="80" height="4" rx="2"/><rect x="14" y="70" width="92" height="4" rx="2"/><rect x="14" y="84" width="70" height="4" rx="2"/><rect x="14" y="98" width="96" height="4" rx="2"/></g>
+    <rect x="14" y="120" width="102" height="1.5" fill="#cfd8d4"/>
+    <text x="14" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#15201c">TOTAL</text>
+    <text x="116" y="150" text-anchor="end" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#0f766e">Rp 43.200</text>
+    <g fill="#8c9a95"><rect x="14" y="166" width="60" height="4" rx="2"/><rect x="14" y="180" width="76" height="4" rx="2"/></g>
+  </g>
+</svg>

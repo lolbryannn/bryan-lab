@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ${item.updated ? `<p class="note mono">${A.esc(A.ui("d.updated"))}: ${A.esc(item.updated)}</p>` : ""}
         <p class="note">${A.esc(A.ui("d.note"))}</p>
       </div>`;
+    drawer.querySelectorAll("img[loading]").forEach(i => { i.loading = "eager"; });
   }
   function syncDrawer() {
     const slug = slugFromHash();

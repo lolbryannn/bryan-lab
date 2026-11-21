@@ -31,6 +31,7 @@ window.SITE = {
 
 /* Item types shown as filters in the Library. Change labels or add your own. */
 window.TYPES = [
+  { key: "app",      glyph: "▦",   label: { id: "Aplikasi", en: "Apps" } },
   { key: "template", glyph: "</>", label: { id: "Template", en: "Templates" } },
   { key: "design",   glyph: "◇",   label: { id: "File Desain", en: "Design files" } },
   { key: "preset",   glyph: "≋",   label: { id: "Preset", en: "Presets" } },
@@ -55,6 +56,62 @@ window.TYPES = [
   featured  true = also shown on the home page
 */
 window.ITEMS = [
+  {
+    slug: "kasir-umkm",
+    type: "app",
+    title: { id: "Kasir UMKM Gratis", en: "Free Cashier App for Small Shops" },
+    summary: {
+      id: "Aplikasi kasir untuk warung, kedai, laundry, dan toko kecil. Jalan offline di HP & laptop, tanpa server, tanpa daftar, tanpa biaya bulanan.",
+      en: "A cashier (POS) app for food stalls, cafés, laundries and small shops. Works offline on phones and laptops — no server, no sign-up, no monthly fee."
+    },
+    price: 0,
+    link: "https://github.com/lolbryannn/kasir-umkm/archive/refs/heads/main.zip",
+    demo: "https://lolbryannn.github.io/kasir-umkm/",
+    source: "https://github.com/lolbryannn/kasir-umkm",
+    image: "assets/img/kasir-umkm.svg",
+    tags: ["kasir", "pos", "cashier", "umkm", "warung", "toko", "stok", "laporan", "aplikasi", "app", "offline"],
+    features: {
+      id: [
+        "Kasir cepat: ketuk produk, atur jumlah, diskon Rp atau %",
+        "Bayar Tunai (kembalian otomatis), QRIS, atau Transfer",
+        "Struk: cetak di printer thermal 58 mm atau kirim WhatsApp",
+        "Stok otomatis berkurang + peringatan stok menipis",
+        "Riwayat per tanggal, bisa batalkan transaksi",
+        "Laporan: omzet, laba kotor, produk terlaris, grafik, ekspor CSV (Excel)",
+        "Jalan offline & bisa dipasang di layar utama HP",
+        "Cadangan & pulihkan data, Bahasa Indonesia & English"
+      ],
+      en: [
+        "Fast checkout: tap products, set quantities, discounts in Rp or %",
+        "Cash (automatic change), QRIS or bank transfer",
+        "Receipts: print on a 58 mm thermal printer or send via WhatsApp",
+        "Stock that updates itself + low-stock warnings",
+        "Daily history with voids",
+        "Reports: revenue, gross profit, best sellers, charts, CSV export (Excel)",
+        "Works offline and installs to the phone's home screen",
+        "Backup & restore, Indonesian & English"
+      ]
+    },
+    steps: {
+      id: [
+        "Coba dulu di demo (sudah ada data contoh)",
+        "Unduh ZIP, lalu seret foldernya ke app.netlify.com/drop untuk dapat link sendiri",
+        "Buka link di HP kasir → menu browser → Tambahkan ke layar utama",
+        "Atur → Hapus semua data, isi nama toko, tambahkan produkmu",
+        "Rutin unduh cadangan di menu Atur"
+      ],
+      en: [
+        "Try the demo first (it has sample data)",
+        "Download the ZIP and drag the folder onto app.netlify.com/drop to get your own link",
+        "Open the link on the cashier phone → browser menu → Add to Home screen",
+        "Settings → Delete all data, set your store name, add your products",
+        "Download a backup regularly from Settings"
+      ]
+    },
+    files: ["index.html", "app.js", "style.css", "sw.js", "manifest.webmanifest", "icon.svg", "README.md", "LICENSE.txt"],
+    updated: "2026-11-21",
+    featured: true
+  },
   {
     slug: "link-in-bio",
     type: "template",
