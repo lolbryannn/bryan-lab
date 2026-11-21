@@ -45,6 +45,8 @@ window.TYPES = [
   title, summary            text (bilingual)
   price     0 for free, or a number in SITE.currency (e.g. 49000)
   link      where the main button goes (download, GitHub, Gumroad, Lynk.id, YouTube…)
+  demo      optional "Live demo" button link
+  source    optional "GitHub" button link
   image     optional thumbnail path or URL
   tags      list of search words
   features, steps           { id: [...], en: [...] }
@@ -53,6 +55,58 @@ window.TYPES = [
   featured  true = also shown on the home page
 */
 window.ITEMS = [
+  {
+    slug: "link-in-bio",
+    type: "template",
+    title: { id: "Link in Bio Gratis", en: "Free Link in Bio" },
+    summary: {
+      id: "Halaman link-in-bio milikmu sendiri dalam 1 file HTML. 5 tema, ikon otomatis, tanpa iklan, gratis dihosting.",
+      en: "Your own link-in-bio page in one HTML file. 5 themes, automatic icons, no ads, free to host."
+    },
+    price: 0,
+    link: "https://github.com/lolbryannn/link-in-bio-template/archive/refs/heads/main.zip",
+    demo: "https://lolbryannn.github.io/link-in-bio-template/?demo",
+    image: "assets/img/link-in-bio.svg",
+    source: "https://github.com/lolbryannn/link-in-bio-template",
+    tags: ["website", "bio", "link", "linktree", "html", "instagram", "tiktok", "umkm"],
+    features: {
+      id: [
+        "Satu file index.html: tanpa framework, tanpa install",
+        "5 tema (midnight, paper, neon, peach, ocean) + warna aksen sendiri",
+        "Ikon otomatis: Instagram, TikTok, YouTube, WhatsApp, Shopee/Tokopedia, Maps, email…",
+        "Tombol sorotan, label BARU, judul bagian, dan gambar thumbnail",
+        "Tombol share (buka menu share HP atau salin link)",
+        "Ramah HP, cepat, dan aksesibel"
+      ],
+      en: [
+        "One index.html file: no framework, nothing to install",
+        "5 themes (midnight, paper, neon, peach, ocean) + your own accent colour",
+        "Automatic icons: Instagram, TikTok, YouTube, WhatsApp, Shopee/Tokopedia, Maps, email…",
+        "Highlighted button, NEW badges, section headings and thumbnails",
+        "Share button (opens the phone's share sheet or copies the link)",
+        "Mobile-first, fast and accessible"
+      ]
+    },
+    steps: {
+      id: [
+        "Unduh ZIP lalu ekstrak",
+        "Buka index.html pakai Notepad/VS Code, cari \"EDIT DI SINI\"",
+        "Ganti nama, bio, foto, dan link-linkmu, lalu simpan",
+        "Seret foldernya ke app.netlify.com/drop untuk online gratis",
+        "Tempel link-nya di bio Instagram/TikTok"
+      ],
+      en: [
+        "Download the ZIP and extract it",
+        "Open index.html in Notepad/VS Code and find \"EDIT HERE\"",
+        "Change your name, bio, photo and links, then save",
+        "Drag the folder onto app.netlify.com/drop to put it online for free",
+        "Paste the link into your Instagram/TikTok bio"
+      ]
+    },
+    files: ["index.html", "README.md", "LICENSE.txt"],
+    updated: "2026-11-21",
+    featured: true
+  },
   {
     slug: "portfolio-starter",
     sample: true,
@@ -164,28 +218,6 @@ window.ITEMS = [
     steps: {
       id: ["Beli lalu buka link Notion", "Klik Duplicate", "Mulai isi ide pertamamu"],
       en: ["Buy, then open the Notion link", "Click Duplicate", "Add your first idea"]
-    },
-    updated: "2026-11-21"
-  },
-  {
-    slug: "link-in-bio",
-    sample: true,
-    type: "template",
-    title: { id: "Link in Bio", en: "Link in Bio" },
-    summary: {
-      id: "Halaman link-in-bio milikmu sendiri, gratis dihosting, tanpa iklan.",
-      en: "Your own link-in-bio page, free to host, no ads."
-    },
-    price: 0,
-    link: "#",
-    tags: ["website", "bio", "link"],
-    features: {
-      id: ["Satu file HTML", "Ikon sosial media", "Ringan & cepat"],
-      en: ["Single HTML file", "Social icons", "Light and fast"]
-    },
-    steps: {
-      id: ["Unduh", "Ganti link-linkmu", "Unggah"],
-      en: ["Download", "Replace the links", "Upload"]
     },
     updated: "2026-11-21"
   }

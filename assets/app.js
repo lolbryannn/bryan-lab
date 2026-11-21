@@ -40,6 +40,7 @@
     "d.download":      { id: "Unduh gratis", en: "Download free" },
     "d.buy":           { id: "Beli · {p}", en: "Buy · {p}" },
     "d.share":         { id: "Salin link", en: "Copy link" },
+    "d.demo":          { id: "Lihat demo", en: "Live demo" },
     "d.features":      { id: "Isi & fitur", en: "What's inside" },
     "d.steps":         { id: "Cara pakai", en: "How to use" },
     "d.files":         { id: "Berkas", en: "Files" },

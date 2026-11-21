@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="summary">${A.esc(A.t(item.summary))}</p>
         <div class="actions">
           <a class="btn btn-primary" href="${A.esc(A.safeUrl(item.link))}" target="_blank" rel="noopener">${A.esc(mainLabel)} ↗</a>
+          ${item.demo ? `<a class="btn" href="${A.esc(A.safeUrl(item.demo))}" target="_blank" rel="noopener">${A.esc(A.ui("d.demo"))} ↗</a>` : ""}
+          ${item.source ? `<a class="btn" href="${A.esc(A.safeUrl(item.source))}" target="_blank" rel="noopener">GitHub ↗</a>` : ""}
           <button class="btn" type="button" data-share>${A.esc(A.ui("d.share"))}</button>
         </div>
         ${features ? `<div class="block"><h3>${A.esc(A.ui("d.features"))}</h3>${features}</div>` : ""}
